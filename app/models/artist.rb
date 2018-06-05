@@ -17,6 +17,8 @@ class Artist < ActiveRecord::Base
   def genre_count
     #return the number of genres associated with the artist
     binding.pry
-    self.songs.genre.count
+    genres = self.songs.map do |song|
+      song.genre
   end
+  genres.uniq.count
 end
