@@ -21,3 +21,4 @@ class Genre < ActiveRecord::Base
       song.artist.name
   end
 end
+end
